@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "apex-old-six",
+  "appid": "testAppId",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}
