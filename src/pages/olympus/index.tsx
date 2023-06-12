@@ -40,10 +40,7 @@ export default function Olympus() {
   const [start, setStart] = useState([]);
   const [touchMove, setTouchMove] = useState([]);
   //获取两个触点中心坐标
-  const screenMinPoint = useMemo(
-    () => getMidpoint(start[0], start[1]),
-    [start]
-  );
+  const [screenMinPoint, setMidPoint] = useState([]);
   //得到缩放比例
   const scale = useMemo(
     () =>
@@ -52,9 +49,13 @@ export default function Olympus() {
   );
   const onTouchStart = (e) => {
     if (e.touches.length >= 2) {
+      console.log(true);
+      
       //判断是否有两个点在屏幕上
-      setIsDoubleTouch(true);
-      setStart(e.touches);
+      // setIsDoubleTouch(true);
+      // setStart(e.touches);
+
+      // setMidPoint(getMidpoint(e.touches[0], e.touches[1]));
     }
   };
   const onTouchMove = (e) => {
